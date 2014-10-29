@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   get("/lucky",   { :controller => "fortunes", :action => "lucky_numbers" })
   get("/unlucky", { :controller => "fortunes", :action => "unlucky_numbers" })
 
-  # STATIC ROUTES
-  # =============
+  # PART 1: STATIC ROUTES
+  # =====================
 
   # Uncomment each route below ONE AT A TIME and debug.
 
@@ -23,8 +23,8 @@ Rails.application.routes.draw do
   # get("/zodiacs/pisces",      { :controller => "zodiacs", :action => "fish" })
 
 
-  # VARIABLE ROUTES
-  # ===============
+  # PART 2: VARIABLE ROUTES
+  # =======================
 
   # get("/signs/:the_sign",         { :controller => "zodiacs", :action => "sign" })
   # get("/creatures/:the_creature", { :controller => "zodiacs", :action => "creature" })

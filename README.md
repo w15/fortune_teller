@@ -1,5 +1,17 @@
 ## Fortune Teller
 
+### Setup
+
+First **fork** and *then* clone this repository. Open up the entire folder in Sublime.
+
+`cd` into the folder you just cloned and run the following commands:
+
+    bundle install
+
+    rails server
+
+If it worked, you should be able to navigate to http://localhost:3000 and see something there. If it didn't work, make sure you don't have any old servers running in other tabs or windows.
+
 ### Part 1: Static routes
 
 I've added a list of nav links to `/zodiacs/leo`, `/zodiacs/cancer`, etc.
