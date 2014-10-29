@@ -65,7 +65,14 @@ or
      =>
     #<Zodiac:0x007fd782f8d548 @creature="lion", @sign="leo", @fortune="Success on all levels is filling your life and making you feel absolutely wonderful, Leo. The downside of this is that you might be a little too conscientious. Are you putting in a lot of extra hours? Be discriminating about this and don't work harder than necessary. You could get stressed to the point of taxing your strength too much, and that won't help you. Pace yourself.">
 
-**YOUR JOB:** In the `ZodiacsController#sign` action, look up the appropriate zodiac using the user input from the `params` hash. Display the fortune in the view template.
+Once you have a single `Zodiac` object, you can access its individual attributes like so:
+
+    2.1.3 :003 > z = Zodiac.find_by({ :sign => "leo" })
+    2.1.3 :004 > z.fortune
+     =>
+    "Success on all levels is filling your life and making you feel absolutely wonderful, Leo. The downside of this is that you might be a little too conscientious. Are you putting in a lot of extra hours? Be discriminating about this and don't work harder than necessary. You could get stressed to the point of taxing your strength too much, and that won't help you. Pace yourself."
+
+**YOUR JOB:** In the `ZodiacsController#sign` action, look up the appropriate zodiac using the user input from the `params` hash. Display the corresponding fortune in the view template.
 
 In other words, these URLs will all work and display both the sign and fortune when you are done:
 
