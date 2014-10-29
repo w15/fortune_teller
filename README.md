@@ -10,11 +10,11 @@ First **fork** and *then* clone this repository. Open up the entire folder in Su
 
     rails server
 
-If it worked, you should be able to navigate to http://localhost:3000 and see something there. If it didn't work, make sure you don't have any old servers running in other tabs or windows.
+If it worked, you should be able to navigate to [http://localhost:3000](http://localhost:3000) and see something there. If it didn't work, make sure you don't have any old servers running in other tabs or windows.
 
 ### Part 1: Static routes
 
-I've added a list of nav links to `/zodiacs/leo`, `/zodiacs/cancer`, etc.
+I've added a list of nav links to [http://localhost:3000/zodiacs/leo](http://localhost:3000/zodiacs/leo), [http://localhost:3000/zodiacs/cancer](http://localhost:3000/zodiacs/cancer), etc.
 
 Currently, none of them work. In `routes.rb`, uncomment each one *one at a time* and make it work. I've embedded at least one bug into each RCAV.
 
@@ -26,7 +26,7 @@ Let's do the zodiacs a different way; with a single dynamic route that can handl
 
 #### Dynamic routes
 
-There's a route at the bottom of `routes.rb` for `/signs/:the_sign`. Uncomment it and make it function. In other words, try going to http://localhost:3000/signs/whatever in Chrome and connect dots until some HTML to shows up. Throw in an `h1` tag with some static content for now.
+There's a route at the bottom of `routes.rb` for `/signs/:the_sign`. Uncomment it and make it function. In other words, try going to [http://localhost:3000/signs/whatever](http://localhost:3000/signs/whatever) in Chrome and connect dots until some HTML to shows up. Throw in an `h1` tag with some static content for now.
 
 Next, replace the static content in the `h1` with what the user typed after the slash when they accessed this route. Remember, any parameters (i.e. inputs) coming from the user are accessible in our actions and views in the `params` hash. For example,
 
@@ -88,33 +88,33 @@ Once you have a single `Zodiac` object, you can access its individual attributes
 
 In other words, these URLs will all work and display both the sign and fortune when you are done:
 
- - http://localhost:3000/signs/aries
- - http://localhost:3000/signs/taurus
- - http://localhost:3000/signs/gemini
- - http://localhost:3000/signs/cancer
- - http://localhost:3000/signs/leo
- - http://localhost:3000/signs/virgo
- - http://localhost:3000/signs/libra
- - http://localhost:3000/signs/scorpio
- - http://localhost:3000/signs/sagittarius
- - http://localhost:3000/signs/capricorn
- - http://localhost:3000/signs/aquarius
- - http://localhost:3000/signs/pisces
+ - [http://localhost:3000/signs/aries](http://localhost:3000/signs/aries)
+ - [http://localhost:3000/signs/taurus](http://localhost:3000/signs/taurus)
+ - [http://localhost:3000/signs/gemini](http://localhost:3000/signs/gemini)
+ - [http://localhost:3000/signs/cancer](http://localhost:3000/signs/cancer)
+ - [http://localhost:3000/signs/leo](http://localhost:3000/signs/leo)
+ - [http://localhost:3000/signs/virgo](http://localhost:3000/signs/virgo)
+ - [http://localhost:3000/signs/libra](http://localhost:3000/signs/libra)
+ - [http://localhost:3000/signs/scorpio](http://localhost:3000/signs/scorpio)
+ - [http://localhost:3000/signs/sagittarius](http://localhost:3000/signs/sagittarius)
+ - [http://localhost:3000/signs/capricorn](http://localhost:3000/signs/capricorn)
+ - [http://localhost:3000/signs/aquarius](http://localhost:3000/signs/aquarius)
+ - [http://localhost:3000/signs/pisces](http://localhost:3000/signs/pisces)
 
 **YOUR OTHER JOB:** Similarly, make all these URLs work:
 
- - http://localhost:3000/creatures/ram
- - http://localhost:3000/creatures/bull
- - http://localhost:3000/creatures/twins
- - http://localhost:3000/creatures/crab
- - http://localhost:3000/creatures/lion
- - http://localhost:3000/creatures/maiden
- - http://localhost:3000/creatures/scales
- - http://localhost:3000/creatures/scorpion
- - http://localhost:3000/creatures/archer
- - http://localhost:3000/creatures/goat
- - http://localhost:3000/creatures/waterbearer
- - http://localhost:3000/creatures/fish
+ - [http://localhost:3000/creatures/ram](http://localhost:3000/creatures/ram)
+ - [http://localhost:3000/creatures/bull](http://localhost:3000/creatures/bull)
+ - [http://localhost:3000/creatures/twins](http://localhost:3000/creatures/twins)
+ - [http://localhost:3000/creatures/crab](http://localhost:3000/creatures/crab)
+ - [http://localhost:3000/creatures/lion](http://localhost:3000/creatures/lion)
+ - [http://localhost:3000/creatures/maiden](http://localhost:3000/creatures/maiden)
+ - [http://localhost:3000/creatures/scales](http://localhost:3000/creatures/scales)
+ - [http://localhost:3000/creatures/scorpion](http://localhost:3000/creatures/scorpion)
+ - [http://localhost:3000/creatures/archer](http://localhost:3000/creatures/archer)
+ - [http://localhost:3000/creatures/goat](http://localhost:3000/creatures/goat)
+ - [http://localhost:3000/creatures/waterbearer](http://localhost:3000/creatures/waterbearer)
+ - [http://localhost:3000/creatures/fish](http://localhost:3000/creatures/fish)
 
 using a single, dynamic RCAV.
 
