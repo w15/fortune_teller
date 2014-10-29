@@ -116,5 +116,5 @@ In other words, these URLs will all work and display both the sign and fortune w
  - [http://localhost:3000/creatures/waterbearer](http://localhost:3000/creatures/waterbearer)
  - [http://localhost:3000/creatures/fish](http://localhost:3000/creatures/fish)
 
-using a single, dynamic RCAV.
+using a single, flexible, smart RCAV.
 
