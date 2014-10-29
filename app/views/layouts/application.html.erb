@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FortuneTeller</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <ul>
+    <li><a href="http://localhost:3000/lucky">Lucky Numbers</a></li>
+    <li><a href="http://localhost:3000/unlucky">Unlucky Numbers</a></li>
+    <li><a href="http://localhost:3000/zodiacs/aries">Aries</a></li>
+    <li><a href="http://localhost:3000/zodiacs/taurus">Taurus</a></li>
+    <li><a href="http://localhost:3000/zodiacs/gemini">Gemini</a></li>
+    <li><a href="http://localhost:3000/zodiacs/cancer">Cancer</a></li>
+    <li><a href="http://localhost:3000/zodiacs/leo">Leo</a></li>
+    <li><a href="http://localhost:3000/zodiacs/virgo">Virgo</a></li>
+    <li><a href="http://localhost:3000/zodiacs/libra">Libra</a></li>
+    <li><a href="http://localhost:3000/zodiacs/scorpio">Scorpio</a></li>
+    <li><a href="http://localhost:3000/zodiacs/sagittarius">Sagittarius</a></li>
+    <li><a href="http://localhost:3000/zodiacs/capricorn">Capricorn</a></li>
+    <li><a href="http://localhost:3000/zodiacs/aquarius">Aquarius</a></li>
+    <li><a href="http://localhost:3000/zodiacs/pisces">Pisces</a></li>
+  </ul>
+
+  <%= yield %>
+</body>
+</html>
