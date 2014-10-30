@@ -16,7 +16,7 @@ If it worked, you should be able to navigate to [http://localhost:3000](http://l
 
 I've added a list of nav links to [http://localhost:3000/zodiacs/leo](http://localhost:3000/zodiacs/leo), [http://localhost:3000/zodiacs/cancer](http://localhost:3000/zodiacs/cancer), etc.
 
-Currently, none of them work. In `routes.rb`, uncomment each one *one at a time* and make it work. I've embedded at least one bug into each RCAV.
+Currently, none of them work. In `routes.rb`, uncomment each one *one at a time* and make it work. I've planted at least one bug into each RCAV.
 
 **YOUR JOB:** Debug all 12 RCAVs.
 
@@ -40,7 +40,7 @@ So far so good, but what we really need is the fortune to be dynamically printed
 
 I've already prepared the info for you. In this Rails app, you have access to a class called `Zodiac` that I have created (don't worry about how it works for now - assume it is pulling data from an API or a CSV).
 
-**Available methods:** You can do `Zodiac.all` to retrieve an `Array` of `Zodiac` objects:
+**Available methods:** You can do `Zodiac.all` to retrieve an `Array` of `Zodiac` instances:
 
     2.1.3 :001 > Zodiac.all
      =>
@@ -77,7 +77,7 @@ or
      =>
     #<Zodiac:0x007fd782f8d548 @creature="lion", @sign="leo", @fortune="Success on all levels is filling your life and making you feel absolutely wonderful, Leo. The downside of this is that you might be a little too conscientious. Are you putting in a lot of extra hours? Be discriminating about this and don't work harder than necessary. You could get stressed to the point of taxing your strength too much, and that won't help you. Pace yourself.">
 
-Once you have a single `Zodiac` object, you can access its individual attributes like so:
+Once you have a single `Zodiac` instance, you can access its individual attributes like so:
 
     2.1.3 :003 > z = Zodiac.find_by({ :sign => "leo" })
     2.1.3 :004 > z.fortune
@@ -116,5 +116,5 @@ In other words, these URLs will all work and display both the sign and fortune w
  - [http://localhost:3000/creatures/waterbearer](http://localhost:3000/creatures/waterbearer)
  - [http://localhost:3000/creatures/fish](http://localhost:3000/creatures/fish)
 
-using a single, flexible, smart RCAV.
+using a second flexible, smart RCAV.
 
