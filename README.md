@@ -46,7 +46,7 @@ I've already prepared the info for you. In this Rails app, you have access to a 
 
 **Available methods:** You can call `Zodiac.all` to retrieve an `Array` of `Zodiac` instances:
 
-    2.1.3 :001 > Zodiac.all
+    2.2.0 :001 > Zodiac.all
      =>
     [
       #<Zodiac:0x007fd7825d4a60
@@ -71,20 +71,20 @@ As you can see, each `Zodiac` instance has three attributes -- creature, sign, a
 
 You can also look up single row, given a search criterion, using the `.find_by` method:
 
-    2.1.3 :002 > Zodiac.find_by({ :sign => "leo" })
+    2.2.0 :002 > Zodiac.find_by({ :sign => "leo" })
      =>
     #<Zodiac:0x007fd782f8d548 @creature="lion", @sign="leo", @fortune="Success on all levels is filling your life and making you feel absolutely wonderful, Leo. The downside of this is that you might be a little too conscientious. Are you putting in a lot of extra hours? Be discriminating about this and don't work harder than necessary. You could get stressed to the point of taxing your strength too much, and that won't help you. Pace yourself.">
 
 or
 
-    2.1.3 :002 > Zodiac.find_by({ :creature => "lion" })
+    2.2.0 :002 > Zodiac.find_by({ :creature => "lion" })
      =>
     #<Zodiac:0x007fd782f8d548 @creature="lion", @sign="leo", @fortune="Success on all levels is filling your life and making you feel absolutely wonderful, Leo. The downside of this is that you might be a little too conscientious. Are you putting in a lot of extra hours? Be discriminating about this and don't work harder than necessary. You could get stressed to the point of taxing your strength too much, and that won't help you. Pace yourself.">
 
 Once you have a single `Zodiac` instance, you can access its individual attributes like so:
 
-    2.1.3 :003 > z = Zodiac.find_by({ :sign => "leo" })
-    2.1.3 :004 > z.fortune
+    2.2.0 :003 > z = Zodiac.find_by({ :sign => "leo" })
+    2.2.0 :004 > z.fortune
      =>
     "Success on all levels is filling your life and making you feel absolutely wonderful, Leo. The downside of this is that you might be a little too conscientious. Are you putting in a lot of extra hours? Be discriminating about this and don't work harder than necessary. You could get stressed to the point of taxing your strength too much, and that won't help you. Pace yourself."
 
