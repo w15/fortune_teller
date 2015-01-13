@@ -5,25 +5,117 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+
+  <!-- Connect to Bootstrap CSS -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+  <!-- Connect to Font Awesome CSS -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+  <!-- Connect to our own custom CSS -->
+
+  <link rel="stylesheet" href="/my_styles.css">
+
+  <!-- Connect to Jquery (required before Bootstrap Javascript) -->
+  <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+
+  <!-- Connect to Bootstrap Javascript -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <ul>
-    <li><a href="http://localhost:3000/lucky">Lucky Numbers</a></li>
-    <li><a href="http://localhost:3000/unlucky">Unlucky Numbers</a></li>
-    <li><a href="http://localhost:3000/zodiacs/aries">Aries</a></li>
-    <li><a href="http://localhost:3000/zodiacs/taurus">Taurus</a></li>
-    <li><a href="http://localhost:3000/zodiacs/gemini">Gemini</a></li>
-    <li><a href="http://localhost:3000/zodiacs/cancer">Cancer</a></li>
-    <li><a href="http://localhost:3000/zodiacs/leo">Leo</a></li>
-    <li><a href="http://localhost:3000/zodiacs/virgo">Virgo</a></li>
-    <li><a href="http://localhost:3000/zodiacs/libra">Libra</a></li>
-    <li><a href="http://localhost:3000/zodiacs/scorpio">Scorpio</a></li>
-    <li><a href="http://localhost:3000/zodiacs/sagittarius">Sagittarius</a></li>
-    <li><a href="http://localhost:3000/zodiacs/capricorn">Capricorn</a></li>
-    <li><a href="http://localhost:3000/zodiacs/aquarius">Aquarius</a></li>
-    <li><a href="http://localhost:3000/zodiacs/pisces">Pisces</a></li>
-  </ul>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://localhost:3000/">Fortune Teller</a>
+      </div>
 
-  <%= yield %>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Numbers <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="http://localhost:3000/lucky_numbers">Lucky</a></li>
+              <li><a href="http://localhost:3000/unlucky_numbers">Unlucky</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Fortunes by Sign (static routes) <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="http://localhost:3000/zodiacs/aries">Aries</a></li>
+              <li><a href="http://localhost:3000/zodiacs/taurus">Taurus</a></li>
+              <li><a href="http://localhost:3000/zodiacs/gemini">Gemini</a></li>
+              <li><a href="http://localhost:3000/zodiacs/cancer">Cancer</a></li>
+              <li><a href="http://localhost:3000/zodiacs/leo">Leo</a></li>
+              <li><a href="http://localhost:3000/zodiacs/virgo">Virgo</a></li>
+              <li><a href="http://localhost:3000/zodiacs/libra">Libra</a></li>
+              <li><a href="http://localhost:3000/zodiacs/scorpio">Scorpio</a></li>
+              <li><a href="http://localhost:3000/zodiacs/sagittarius">Sagittarius</a></li>
+              <li><a href="http://localhost:3000/zodiacs/capricorn">Capricorn</a></li>
+              <li><a href="http://localhost:3000/zodiacs/aquarius">Aquarius</a></li>
+              <li><a href="http://localhost:3000/zodiacs/pisces">Pisces</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Fortunes by Sign (dynamic route) <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="http://localhost:3000/signs/aries">Aries</a></li>
+              <li><a href="http://localhost:3000/signs/taurus">Taurus</a></li>
+              <li><a href="http://localhost:3000/signs/gemini">Gemini</a></li>
+              <li><a href="http://localhost:3000/signs/cancer">Cancer</a></li>
+              <li><a href="http://localhost:3000/signs/leo">Leo</a></li>
+              <li><a href="http://localhost:3000/signs/virgo">Virgo</a></li>
+              <li><a href="http://localhost:3000/signs/libra">Libra</a></li>
+              <li><a href="http://localhost:3000/signs/scorpio">Scorpio</a></li>
+              <li><a href="http://localhost:3000/signs/sagittarius">Sagittarius</a></li>
+              <li><a href="http://localhost:3000/signs/capricorn">Capricorn</a></li>
+              <li><a href="http://localhost:3000/signs/aquarius">Aquarius</a></li>
+              <li><a href="http://localhost:3000/signs/pisces">Pisces</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Fortunes by Creature (dynamic route) <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="http://localhost:3000/creatures/ram">Ram</a></li>
+              <li><a href="http://localhost:3000/creatures/bull">Bull</a></li>
+              <li><a href="http://localhost:3000/creatures/twins">Twins</a></li>
+              <li><a href="http://localhost:3000/creatures/crab">Crab</a></li>
+              <li><a href="http://localhost:3000/creatures/lion">Lion</a></li>
+              <li><a href="http://localhost:3000/creatures/maiden">Maiden</a></li>
+              <li><a href="http://localhost:3000/creatures/scales">Scales</a></li>
+              <li><a href="http://localhost:3000/creatures/scorpion">Scorpion</a></li>
+              <li><a href="http://localhost:3000/creatures/archer">Archer</a></li>
+              <li><a href="http://localhost:3000/creatures/goat">Goat</a></li>
+              <li><a href="http://localhost:3000/creatures/waterbearer">Waterbearer</a></li>
+              <li><a href="http://localhost:3000/creatures/fish">Fish</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

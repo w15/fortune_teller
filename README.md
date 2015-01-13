@@ -2,7 +2,7 @@
 
 ### Setup
 
-First **fork** and *then* clone this repository. Open up the entire folder in Sublime.
+Clone this repository. Open up the entire folder in Sublime.
 
 `cd` into the folder you just cloned and run the following commands:
 
@@ -14,7 +14,7 @@ If it worked, you should be able to navigate to [http://localhost:3000](http://l
 
 ### Part 1: Static routes
 
-I've added a list of nav links to [http://localhost:3000/zodiacs/leo](http://localhost:3000/zodiacs/leo), [http://localhost:3000/zodiacs/cancer](http://localhost:3000/zodiacs/cancer), etc.
+I've added a list of links in the nav to [http://localhost:3000/zodiacs/leo](http://localhost:3000/zodiacs/leo), [http://localhost:3000/zodiacs/cancer](http://localhost:3000/zodiacs/cancer), etc. You'll find them in the dropdown under "Fortunes by Sign (static routes)."
 
 Currently, none of them work. In `routes.rb`, uncomment each one *one at a time* and make it work. I've planted at least one bug into each RCAV.
 
@@ -24,9 +24,13 @@ Currently, none of them work. In `routes.rb`, uncomment each one *one at a time*
 
 Let's do the zodiacs a different way; with a single dynamic route that can handle all 12 signs.
 
+I've added a list of links in the nav to [http://localhost:3000/signs/leo](http://localhost:3000/signs/leo), [http://localhost:3000/signs/cancer](http://localhost:3000/signs/cancer), etc. You'll find them in the dropdown under "Fortunes by Sign (dynamic route)."
+
+Currently, none of them work.
+
 #### Dynamic routes
 
-There's a route at the bottom of `routes.rb` for `/signs/:the_sign`. Uncomment it and make it function. In other words, try going to [http://localhost:3000/signs/whatever](http://localhost:3000/signs/whatever) in Chrome and connect dots until some HTML to shows up. Throw in an `h1` tag with some static content for now.
+There's a route at the bottom of `routes.rb` for `/signs/:the_sign`. Uncomment it and make it function. In other words, try going to [http://localhost:3000/signs/whatever](http://localhost:3000/signs/whatever) in Chrome and connect RCAV dots until some HTML to shows up. Throw in an `h1` tag with some static content for now.
 
 Next, replace the static content in the `h1` with what the user typed after the slash when they accessed this route. Remember, any parameters (i.e. inputs) coming from the user are accessible in our actions and views in the `params` hash. For example,
 
@@ -38,9 +42,9 @@ will retrieve what they typed after the slash in this case (assuming that in you
 
 So far so good, but what we really need is the fortune to be dynamically printed in the view along with the name of the sign. To do this, you are going to have to pull the info from somewhere.
 
-I've already prepared the info for you. In this Rails app, you have access to a class called `Zodiac` that I have created (don't worry about how it works for now - assume it is pulling data from an API or a CSV).
+I've already prepared the info for you. In this Rails app, you have access to a class called `Zodiac` that I have created (don't worry about how it works for now - assume it is pulling data from an API or a CSV). You can talk to the Zodiac class from anywhere in the Rails app (an action method, a view template, etc).
 
-**Available methods:** You can do `Zodiac.all` to retrieve an `Array` of `Zodiac` instances:
+**Available methods:** You can call `Zodiac.all` to retrieve an `Array` of `Zodiac` instances:
 
     2.1.3 :001 > Zodiac.all
      =>
@@ -63,7 +67,7 @@ I've already prepared the info for you. In this Rails app, you have access to a 
       etc.
 
 
-As you can see, each `Zodiac` object has three attributes -- creature, sign, and fortune.
+As you can see, each `Zodiac` instance has three attributes -- creature, sign, and fortune.
 
 You can also look up single row, given a search criterion, using the `.find_by` method:
 
