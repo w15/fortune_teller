@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
