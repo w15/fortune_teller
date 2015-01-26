@@ -1,3 +1,6 @@
-<h1><%= @zodiac.capitalize %></h1>
+<h1>
+  <%= @zodiac.sign.capitalize %>
+  <small><%= @zodiac.creature.capitalize %></small>
+</h1>
 
-<p><%= @prediction %></p>
+<p><%= @zodiac.fortune %></p>
