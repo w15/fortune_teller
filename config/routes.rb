@@ -11,6 +11,12 @@ Rails.application.routes.draw do
 
   get("/creatures/:the_creature", { :controller => "zodiacs", :action => "creature"})
 
+  # PART #3: READING FROM DATABASE
+
+  get("/zodiacs", { :controller => "zodiacs", :action => "index" })
+
+  get("/zodiacs/:id", { :controller => "zodiacs", :action => "show" })
+
 end
 
 
