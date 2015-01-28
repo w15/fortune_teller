@@ -1,0 +1,9 @@
+<h1>Howdy</h1>
+
+<ul>
+
+<% @zodiacs.each do |zodiac| %>
+  <li><%= zodiac.sign.capitalize %> (<%= zodiac.creature.capitalize %>)</li>
+<% end %>
+
+</ul>
