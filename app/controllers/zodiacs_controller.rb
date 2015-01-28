@@ -1,4 +1,8 @@
 class ZodiacsController < ApplicationController
+  def show
+    @zodiac = Zodiac.find_by({ :id => params[:id] })
+  end
+
   def index
     @zodiacs = Zodiac.all
   end
